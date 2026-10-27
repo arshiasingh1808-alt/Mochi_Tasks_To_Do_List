@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mochi Tasks</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Mochiy+Pop+One&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+
+<main>
+  <div class="card">
+    <header>
+      <span class="mascot" aria-hidden="true">🍡</span>
+      <h1>Mochi Tasks</h1>
+      <p class="sub" id="greeting">Add something small and sweet to do</p>
+    </header>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="What shall we do today?" maxlength="120" autocomplete="off" aria-label="New task">
+      <label class="duewrap">Due <input type="date" id="dueInput" aria-label="Due date (optional)"></label>
+      <button type="submit" class="add" id="addBtn">Add</button>
+    </form>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter tasks">
+      <button data-filter="all" class="on">All</button>
+      <button data-filter="active">To do</button>
+      <button data-filter="done">Done</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <footer>
+      <span id="count"></span>
+      <button class="clear" id="clearDone">Clear done</button>
+    </footer>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
